@@ -13,7 +13,7 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@pdf-viewer/react": "latest",
+    "@react-pdf-kit/viewer": "latest",
     "@react-router/dev": "^7.10.1",
     "@react-router/node": "^7.10.1",
     "@react-router/serve": "^7.10.1",

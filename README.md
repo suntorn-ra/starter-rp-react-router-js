@@ -1,9 +1,8 @@
-# React PDF Starter Toolkit in React Router and JavaScript
+# React PDF Kit Starter Toolkit in React Router and JavaScript
 
+[![Open example in codesandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/github/react-pdf-kit/starter-rp-react-router-js/main)
 
-[![Open example in codesandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/github/react-pdf-dev/starter-rp-react-router-js/main)
-
-Welcome to the React PDF Starter Toolkit! This repository provides a comprehensive guide on integrating React PDF with React Router and JavaScript. It showcases how React PDF can be integrated and rendered as part of a React.js project.
+Welcome to the React PDF Kit Starter Toolkit! This repository provides a comprehensive guide on integrating React PDF with React Router and JavaScript. It showcases how the React PDF Viewer component can be integrated and rendered as part of a React.js project.
 
 ## Table of Contents
 
@@ -19,7 +18,7 @@ Welcome to the React PDF Starter Toolkit! This repository provides a comprehensi
 1. **Clone the Repository**: If you haven't already, clone the repository and navigate into the project directory.
 
    ```bash
-   git clone https://github.com/react-pdf-dev/starter-rp-react-router-js.git
+   git clone https://github.com/react-pdf-kit/starter-rp-react-router-js.git
    cd starter-rp-react-router-js
    ```
 
@@ -37,7 +36,7 @@ Welcome to the React PDF Starter Toolkit! This repository provides a comprehensi
 
 ### Running the Example Project
 
-This repository includes an example project to demonstrate React PDF in action.
+This repository includes an example project to demonstrate React PDF Kit in action.
 
 1. **Start the Development Server**: Use the following command to start the development server
 
@@ -60,12 +59,7 @@ Once the example project is running, you can explore the source code to see how 
 1.  **Import the component**: Import the desired React PDF component into your codes
 
 ```jsx
-import {
-  RPProvider,
-  RPDefaultLayout,
-  RPPages,
-  RPConfig,
-} from "@pdf-viewer/react";
+import { RPProvider, RPLayout, RPPages, RPConfig } from "@react-pdf-kit/viewer";
 
 const AppPdfViewer = (props) => {
   const { showToolbar = true, defaultLayoutProps, pdfSrc } = props;
@@ -73,9 +67,9 @@ const AppPdfViewer = (props) => {
     <RPConfig licenseKey="YOUR_LICENSE_KEY">
       <RPProvider src={pdfSrc}>
         {showToolbar ? (
-          <RPDefaultLayout {...defaultLayoutProps}>
+          <RPLayout toolbar {...defaultLayoutProps}>
             <RPPages />
-          </RPDefaultLayout>
+          </RPLayout>
         ) : (
           <div style={{ width: "100%", height: "550px" }}>
             <RPPages />
@@ -96,7 +90,7 @@ import AppPdfViewer from "../components/AppPdfViewer";
 
 export function meta() {
   return [
-    { title: "RP Starter Toolkit: React Router + JavaScript" },
+    { title: "React PDF Kit Starter Toolkit: React Router + JavaScript" },
     { name: "description", content: "Welcome to React Router + JavaScript!" },
   ];
 }
@@ -107,19 +101,21 @@ export default function Home() {
   return (
     <>
       <div className="container">
-        <h1>RP Starter Toolkit: React Router + JavaScript</h1>
+        <h1>React PDF Kit Starter Toolkit: React Router + JavaScript</h1>
         <br />
         <h2>Default Toolbar</h2>
         <AppPdfViewer pdfSrc={pdfSrc} />
         <h2>Without Toolbar</h2>
-        <AppPdfViewer pdfSrc={pdfSrc}
+        <AppPdfViewer
+          pdfSrc={pdfSrc}
           showToolbar={false}
           defaultLayoutProps={{
             style: { width: "100%", height: "550px" },
           }}
         />
         <h2>Mobile</h2>
-        <AppPdfViewer pdfSrc={pdfSrc}
+        <AppPdfViewer
+          pdfSrc={pdfSrc}
           defaultLayoutProps={{
             style: { width: "500px" },
           }}
@@ -140,13 +136,13 @@ For more examples, please refer to the `src/routes/home.jsx` file in this reposi
 
 _Remark: If you would like more examples, feel free open an issue._
 
-For more configurations, please check the [documentation](https://docs.react-pdf.dev) site.
+For more configurations, please check the [documentation](https://docs.react-pdf-kit.dev/) site.
 
 ## Meta
 
-- Homepage: [https://www.react-pdf.dev](https://www.react-pdf.dev)
-- Docs: [https://docs.react-pdf.dev](https://docs.react-pdf.dev)
+- Homepage: [https://www.react-pdf-kit.dev/](https://www.react-pdf-kit.dev/)
+- Docs: [https://docs.react-pdf-kit.dev/](https://docs.react-pdf-kit.dev/)
 
 ---
 
-Thank you for using React PDF! We hope this toolkit helps you build amazing React.js applications. If you have any questions or need further assistance on this example, please feel free to open an issue. Happy coding!
+Thank you for using React PDF Kit! We hope this toolkit helps you build amazing React.js applications. If you have any questions or need further assistance on this example, please feel free to open an issue. Happy coding!
