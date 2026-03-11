@@ -2,7 +2,7 @@ import AppPdfViewer from "../components/AppPdfViewer";
 
 export function meta() {
   return [
-    { title: "RP Starter Toolkit: React Router + JavaScript" },
+    { title: "React PDF Kit Starter Toolkit: React Router + JavaScript" },
     { name: "description", content: "Welcome to React Router + JavaScript!" },
   ];
 }
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <div className="container">
-        <h1>RP Starter Toolkit: React Router + JavaScript</h1>
+        <h1>React PDF Kit Starter Toolkit: React Router + JavaScript</h1>
         <br />
         <h2>Default Toolbar</h2>
         <AppPdfViewer pdfSrc={pdfSrc} />
